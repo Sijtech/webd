@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>Team 5</p>
+<p>Team 6</p>
 <?php
 
 ?>
