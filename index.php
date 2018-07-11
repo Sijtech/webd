@@ -6,8 +6,23 @@
 <title>OWN CMS</title>
 </head>
 <body>
-  <h1> OWN CMS </h1>
-  <p>Test</p>
+  <div id="main">
+
+    <div id="nav">
+      <h1> Navigation </h1>
+      <p>Test</p>
+    </div>
+    <div id="art">
+      <h1> Artikel </h1>
+      <p>Test</p>
+    </div>
+    <div id="footer">
+      <h1> Footer </h1>
+      <p>Test</p>
+    </div>
+  </div>
+
+
   <?php
 
   ?>

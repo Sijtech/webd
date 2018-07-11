@@ -1,3 +1,26 @@
-p {
-  color: red;
+#main {
+  margin: auto;
+  width: 80%;
+  border: 1px solid green;
+  padding: 10px;
+  position: relative;
+}
+
+#nav {
+  float: left;
+  width: 30%;
+  border: 1px solid red;
+}
+
+#art {
+  float: left;
+  width: 65%;
+  border: 1px solid blue;
+}
+
+#footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border: 1px dashed green;
 }
