@@ -3,17 +3,24 @@
 class Artikel
 {
   //Eigenschaften
-  public $id;
-  public $autor;
-  public $titel;
-  public $artikel;
-  public $erstelldatum;
+  public $id = null;
+  public $autor = null;
+  public $titel = null;
+  public $artikel = null;
+  public $erstelldatum = null;
   //Debug Funktion
   public static function debug($test) {
     echo $test;
   }
   //Konstruktor
-
+  public function __construct($data=array()) {
+    //echo $data["idArtikel"];
+    if(isset($data["idArtikel"]))$this->id = $data["idArtikel"];
+    if(isset($data["Autor"]))$this->autor = $data["Autor"];
+    if(isset($data["Titel"]))$this->titel = $data["Titel"];
+    if(isset($data["Artikel"]))$this->artikel = $data["Artikel"];
+    if(isset($data["Erstelldatum"]))$this->erstelldatum = $data["Erstelldatum"];
+  }
   //Einzelnen Artikel mittels ID auslesen
   public static function getArtikelById($id) {
 
@@ -29,17 +36,18 @@ class Artikel
         echo $sql;
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-        $fields = $stmt->fetchAll();
 
-
-          foreach ($fields as $field) {
-            //echo implode(",",$field);
-            echo $field["Titel"];
-          }
-            } else {
+        $artikelListe = array();
+        while ($row = $stmt->fetch()) {
+          $artikelObj = new Artikel($row);
+          //echo $artikelObj->titel;
+          $artikelListe[] = $artikelObj;
+        }
+      } else {
         echo "no connection";
       }
       $conn = null;
+      return $artikelListe;
     } catch(Exception $e) {
       echo $e->getMessage();
     }
