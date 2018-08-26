@@ -6,10 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </head>
   <body>
-    <h1>Header</h1>
-    <div id="main">
-      <div id="nav">
-            <h1> Navigation </h1>
-      </div>
-
-    <!--  <a href="."><img id="logo" src="images/logo.jpg" alt="Widget News" /></a> -->
+    <header>
+    </header>
+    <section>
+      <nav>
+      	<ul>
+        	<li><a href="index.php">Homepage</a></li>
+        	<li><a href="admin.php">Backend</a></li>
+      	</ul>
+      </nav>
+      <article>
