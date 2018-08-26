@@ -1,15 +1,15 @@
-<?php include "templates/include/header.php" ?>
-<div id="art">
-  <h1>Artikel</h1>
-  <?php
+<?php 
+  include "templates/include/header.php"; 
   foreach ($artikelListe as $einzelnerArtikel) {
-    echo $einzelnerArtikel->id;
-    echo $einzelnerArtikel->autor;
-    echo $einzelnerArtikel->titel;
-    echo $einzelnerArtikel->artikel;
-    echo $einzelnerArtikel->erstelldatum;
-  }
-  ?>
+?>
+    <article id="listArticles">
+    <?php
+    //echo $einzelnerArtikel->id . " ";
+    echo "<h3>" . $einzelnerArtikel->titel . "</h3>";
+    echo "<p>" . $einzelnerArtikel->artikel . "</p>";
+    echo $einzelnerArtikel->autor . " - " . $einzelnerArtikel->erstelldatum . "<br>";
+    ?>
+    </article>
+  <?php } ?>
 
-</div>
 <?php include "templates/include/footer.php" ?>
