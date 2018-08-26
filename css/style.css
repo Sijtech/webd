@@ -1,26 +1,46 @@
-#main {
-  margin: auto;
-  width: 80%;
-  border: 1px solid green;
-  padding: 10px;
-  position: relative;
+* {
+    box-sizing: border-box;
 }
 
-#nav {
-  float: left;
-  width: 30%;
-  border: 1px solid red;
+header {
+	background: #fcaf3e;
+	min-height: 90px;
 }
 
-#art {
-  float: left;
-  width: 65%;
-  border: 1px solid blue;
+
+nav {
+	float: left;
+	width: 30%;
+	background: #f57900;
+	padding: 20px;
+	min-height: 300px;
 }
 
-#footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  border: 1px dashed green;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+	float: left;
+	width: 70%;
+	background: #eeeeec;
+	padding: 20px;
+	min-height: 300px;
+}
+
+#listArticles {
+	padding: 10px 0px 0px 0px;
+	min-height: 10px;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+	background: #ce5c00;
+	min-height: 90px;
 }
