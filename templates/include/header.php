@@ -3,10 +3,14 @@
   <head>
     <title><?php echo htmlspecialchars( $results['pageTitle'] )?></title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/scripts.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </head>
   <body>
     <header>
+    	<input list="data" type="text" id="search" onkeyup="searchFunc(this.value)"/>
+      <datalist id="data">
+      </datalist>
     </header>
     <section>
       <nav>
