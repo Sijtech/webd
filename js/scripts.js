@@ -48,8 +48,10 @@ function getInput() {
     for (var i = 0; i < opts.length; i++) {
       if (opts[i].value === val) {
         //Ein Item aus der Liste wurde selektiert
+    	//Aktuelle URL auslesen
+    	var url = window.location.hostname;
         //Link öffnen
-        window.open("?action=showArticle&id="+opts[i].id,"_self")
+        window.open("http://"+url+"/index.php?action=showArticle&id="+opts[i].id,"_self");
         break;
       }
     }
