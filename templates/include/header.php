@@ -11,6 +11,7 @@
     	<input list="data" type="text" id="search" onkeyup="searchFunc(this.value)" oninput="getInput()"/>
       <datalist id="data">
       </datalist>
+      <h1>CMS</h1>
     </header>
     <section>
       <nav>

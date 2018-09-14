@@ -11,7 +11,7 @@
   }
 
   function homepage() {
-    $artikelListe = Artikel::getArtikelList();
+    $artikelListe = Artikel::getArtikelList(HOMEPAGE_NUM_ARTICLES);
     require( TEMPLATE_PATH . "/homepage.php" );
   }
   
