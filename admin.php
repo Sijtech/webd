@@ -50,7 +50,7 @@ function newArticle() {
     //wieder die admin Page öffnen
     header( "Location: admin.php?status=changesSaved" );
   }
-  //Vorgang "neuen Artikel erstelen" abbrechen
+  //Vorgang "neuen Artikel erstellen" abbrechen
   elseif (isset($_POST['cancel'])) 
   { 
     header( "Location: admin.php" );

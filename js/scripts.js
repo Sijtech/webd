@@ -1,4 +1,10 @@
+/**
+ * Inhalt des Suchfeldes wird in der Datenbank gesucht. Der Suchwert wird in allen Artikeln gesucht.
+ * @param str
+ * @returns
+ */
 function searchFunc(str) {
+	//Wenn kein Zeichen im Suchfeld
 	if (str.length == 0) {
 	    document.getElementById('data').innerHTML = "";
 	} 
@@ -8,8 +14,10 @@ function searchFunc(str) {
 	    xmlhttp.responseType = 'json';
 	    xmlhttp.onreadystatechange = function() 
 	    {
+	    	//Wenn XML Aufruf erfolgreich war
 		    if (xmlhttp.readyState === 4) 
 		    {
+		    	//Resultat des Ajax Aufruf in resut speichern
 		        var result = xmlhttp.response;
 		        var options = "";
 		        for (suggest in result) {
@@ -20,8 +28,9 @@ function searchFunc(str) {
 		        }
 		    }
 	    }
+	    //Ajax Aufruf ausführen
 	    xmlhttp.open("GET", "ajax.php?search=" + str, true);
-	        xmlhttp.send();
+	    xmlhttp.send();
 	 }
 }
 /**
