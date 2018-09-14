@@ -9,12 +9,12 @@ if (isset($_REQUEST['search'])) {
   $search = $_GET['search'];
   if ($search !== "") {
     $search = strtolower($search);
-//     $len=strlen($search);
     $artikelListe = Artikel::getArtikelList();
     foreach ($artikelListe as $einzelnerArtikel) {
       if (strpos(strtolower($einzelnerArtikel->titel), $search) !== false) 
       {
-        $values[] = $einzelnerArtikel->titel;
+//         $values[] = $einzelnerArtikel->titel;
+        $values[] = $einzelnerArtikel;
       }
       
     }

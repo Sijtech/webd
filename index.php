@@ -12,8 +12,15 @@
 
   function homepage() {
     $artikelListe = Artikel::getArtikelList();
-     //$results['totalRows'] = "5";
-    //$results['pageTitle'] = "Widget News";
     require( TEMPLATE_PATH . "/homepage.php" );
+  }
+  
+  function showArticle() {
+    //ID des anzuzeigenden Artikels einlesen
+    $id = $_GET['id'];
+    //Den Artikel abfragen
+    $results['article'] = Artikel::getArtikelById($id);
+    //folgende Seite anzeigen
+    require( TEMPLATE_PATH . "/homepage/showArticle.php" );
   }
 ?>

@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-    	<input list="data" type="text" id="search" onkeyup="searchFunc(this.value)"/>
+    	<input list="data" type="text" id="search" onkeyup="searchFunc(this.value)" oninput="getInput()"/>
       <datalist id="data">
       </datalist>
     </header>

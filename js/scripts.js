@@ -13,7 +13,7 @@ function searchFunc(str) {
 		        var result = xmlhttp.response;
 		        var options = "";
 		        for (suggest in result) {
-		          options += '<option value="'+result[suggest]+'" />';
+		          options += '<option id='+result[suggest].id+' value="'+result[suggest].titel+'" />';
 		        }
 		        if (options != null) {
 		          document.getElementById('data').innerHTML = options;
@@ -24,43 +24,21 @@ function searchFunc(str) {
 	        xmlhttp.send();
 	 }
 }
-/*
-function fill(Value) {
-   //Assigning value to "search" div in "search.php" file.
-   $('#idSuche').val(Value);
-   //Hiding "display" div in "search.php" file.
-   $('#display').hide();
+/**
+ * Diese Funktion wird ausgelöst, wenn aus der Datalist eine Option selektiert wird.
+ * Und damit wird erkannt, was ausgewählt wurde.
+ * 
+ * @returns
+ */
+function getInput() {
+	var val = document.getElementById("search").value;
+    var opts = document.getElementById('data').childNodes;
+    for (var i = 0; i < opts.length; i++) {
+      if (opts[i].value === val) {
+        //Ein Item aus der Liste wurde selektiert
+        //Link öffnen
+        window.open("http://owncms/index.php?action=showArticle&id="+opts[i].id,"_self")
+        break;
+      }
+    }
 }
- 
-$(document).ready(function() {
-   //On pressing a key on "Search box" in "search.php" file. This function will be called.
-   $("#search").keyup(function() {
-       //Assigning search box value to javascript variable named as "name".
-       var name = $('#idSuche').val();
-       //Validating, if "name" is empty.
-       if (name == "") {
-           //Assigning empty value to "display" div in "search.php" file.
-           $("#display").html("");
-       }
-       //If name is not empty.
-       else {
-           //AJAX is called.
-           $.ajax({
-               //AJAX type is "Post".
-               type: "POST",
-               //Data will be sent to "ajax.php".
-               url: "ajax.php",
-               //Data, that will be sent to "ajax.php".
-               data: {
-                   //Assigning value of "name" into "search" variable.
-                   search: name
-               },
-               //If result found, this funtion will be called.
-               success: function(html) {
-                   //Assigning result to "display" div in "search.php" file.
-                   $("#display").html(html).show();
-               }
-           });
-       }
-   });
-});*/

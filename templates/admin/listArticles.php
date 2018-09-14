@@ -13,6 +13,7 @@
       </tr>
     <?php } ?>
   </table>
+  <p><a href="admin.php?action=newArticle">Artikel erstellen</a></p>
 
 </div>
 <?php include "templates/include/footer.php" ?>
