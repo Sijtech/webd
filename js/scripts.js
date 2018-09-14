@@ -49,7 +49,7 @@ function getInput() {
       if (opts[i].value === val) {
         //Ein Item aus der Liste wurde selektiert
         //Link öffnen
-        window.open("http://owncms/index.php?action=showArticle&id="+opts[i].id,"_self")
+        window.open("?action=showArticle&id="+opts[i].id,"_self")
         break;
       }
     }
