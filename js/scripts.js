@@ -17,12 +17,15 @@ function searchFunc(str) {
 	    	//Wenn XML Aufruf erfolgreich war
 		    if (xmlhttp.readyState === 4) 
 		    {
-		    	//Resultat des Ajax Aufruf in resut speichern
+		    	//Resultat des Ajax Aufruf in result speichern
 		        var result = xmlhttp.response;
+		        //Alle Optionen zurücksetzen
 		        var options = "";
+		        //für jeden Eintrag im result eine otpion erstellen
 		        for (suggest in result) {
 		          options += '<option id='+result[suggest].id+' value="'+result[suggest].titel+'" />';
 		        }
+		        //Wenn die Optionen nicht null sind, in die Datalist einfügen
 		        if (options != null) {
 		          document.getElementById('data').innerHTML = options;
 		        }
