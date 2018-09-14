@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Datum: 14.09.2018
+ * Version: 0.9
+ * @author Severin, Karin, Joel
+ * Projekt: ownCMS
+ */
   require( "config.php" );
   $action = isset( $_GET['action'] ) ? $_GET['action'] : "";
   switch ($action) {

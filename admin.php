@@ -1,4 +1,10 @@
 <?php
+/**
+ * Datum: 14.09.2018
+ * Version: 0.9
+ * @author Severin, Karin, Joel
+ * Projekt: ownCMS
+ */
 /** 
  * Backend
  * Verwaltutung von Artikeln, Kategorien und Benutzern 

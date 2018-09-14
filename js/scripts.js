@@ -1,4 +1,11 @@
 /**
+ * Datum: 14.09.2018
+ * Version: 0.9
+ * @author Severin, Karin, Joel
+ * Projekt: ownCMS
+ */
+
+/**
  * Inhalt des Suchfeldes wird in der Datenbank gesucht. Der Suchwert wird in allen Artikeln gesucht.
  * @param str
  * @returns
